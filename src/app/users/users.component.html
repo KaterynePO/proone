@@ -1,0 +1,28 @@
+<h1>Users</h1>
+<table class="users">
+  <tr>
+    <th *ngFor="let col of columns">
+      {{ col }}
+    </th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user._id }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user.age }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user.address }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user.company }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user.email }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user', user._id]">{{ user.name }}</a>
+    </td>
+  </tr>
+</table>
